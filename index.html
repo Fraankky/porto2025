@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: "#0B0F14",
+            ink: "#E6E6E6",
+            mute: "#A3A3A3",
+            accent: "#22D3EE",
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* optional: nicer scrollbars */
+    ::-webkit-scrollbar{width:10px;height:10px}
+    ::-webkit-scrollbar-thumb{background:#2b2b2b;border-radius:8px}
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-ink antialiased">
+  <!-- NAV -->
+  <header class="fixed inset-x-0 top-0 z-50">
+    <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="mt-3 flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-2 backdrop-blur supports-[backdrop-filter]:bg-white/5">
+        <a href="#hero" class="font-semibold text-2xl tracking-tight">Muhammad Faris.</a>
+        <ul class="hidden gap-6 sm:flex">
+          <li><a data-nav href="#about" class="navlink text-sm text-mute hover:text-ink">About</a></li>
+          <li><a data-nav href="#experience" class="navlink text-sm text-mute hover:text-ink">Experience</a></li>
+          <li><a data-nav href="#projects" class="navlink text-sm text-mute hover:text-ink">Projects</a></li>
+          <li><a data-nav href="#contact" class="navlink text-sm text-mute hover:text-ink">Contact</a></li>
+        </ul>
+        <a href="#contact" class="rounded-xl border border-white/10 bg-white/10 px-3 py-1.5 text-sm hover:bg-white/20">Hire me</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <!-- HERO -->
+    <section id="hero" class="min-h-screen grid content-center gap-8 pt-12">
+      <h1 class="max-w-3xl text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+        Building clean interfaces and reliable web apps.
+      </h1>
+      <p class="max-w-2xl text-mute">
+        I’m <span class="text-ink">Muhammad Faris Abdurrohman</span>, a student frontend-learning full-stack developer.
+        I enjoy crafting minimal, fast, and accessible products.
+      </p>
+      <div class="flex gap-3">
+        <a href="#projects" class="rounded-xl border border-white/10 bg-accent/10 px-5 py-2.5 hover:bg-accent/20">View Projects</a>
+        <a href="#contact" class="rounded-xl border border-white/10 px-5 py-2.5 hover:bg-white/10">Get in Touch</a>
+      </div>
+      <div class="mt-8 flex gap-4 text-mute">
+        <a href="https://github.com/Fraankky" target="_blank" aria-label="GitHub" class="hover:text-ink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.33-1.77-1.33-1.77-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.25 1.85 1.25 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.97 0-1.32.47-2.39 1.24-3.23-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.23 0 4.64-2.8 5.66-5.47 5.96.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/muhammadfaris21" target="_blank" aria-label="LinkedIn" class="hover:text-ink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.24c0-1.25-.03-2.85-1.74-2.85-1.75 0-2.02 1.36-2.02 2.76V21H9z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/fraankkiy/" aria-label="Instagram" class="hover:text-ink">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
+                <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"></stop><stop offset=".348" stop-color="#fc5245"></stop><stop offset=".504" stop-color="#e64771"></stop><stop offset=".643" stop-color="#d53e91"></stop><stop offset=".761" stop-color="#cc39a4"></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"></stop><stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path>
+            </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="scroll-mt-14 py-8">
+      <h2 class="mb-6 text-3xl font-semibold tracking-tight">About</h2>
+      <div class="grid gap-6 md:grid-cols-[180px,1fr]">
+        <img alt="Avatar" src="./image/foto profile.jpg" class="h-44 w-44 rounded-2xl object-cover ring-1 ring-white/10" />
+        <div class="space-y-4 text-mute">
+          <p>I’m a developer focused on building fast, minimal, and accessible interfaces. I enjoy design systems, TypeScript, and performance budgets.</p>
+          <ul class="flex flex-wrap gap-2">
+            <!-- skill pills -->
+            <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">JavaScript</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">TypeScript</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">React</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Tailwind</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Node JS</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">PostgreSQL</li>
+            <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Next JS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="scroll-mt-24 py-14">
+      <h2 class="mb-6 text-3xl font-semibold tracking-tight">Experience</h2>
+      <ol class="relative border-s border-white/10">
+        <!-- item -->
+        <li class="ms-6 pb-10">
+          <span class="absolute -start-3 mt-1.5 h-6 w-6 rounded-full border border-white/20 bg-white/10"></span>
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="font-semibold">Informatics Student at Ahmad Dahlan University</h3>
+            <time class="text-xs text-mute">2023 — Present</time>
+          </div>
+          <p class="mt-2 text-mute">Built product software</p>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-mute">
+            <li>Bootcamp Full Stack Next JS</li>
+            <li>Self learning web dev</li>
+          </ul>
+        </li>
+        
+       
+      </ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="scroll-mt-24 py-20">
+      <h2 class="mb-6 text-3xl font-semibold tracking-tight">Projects</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- card -->
+        <article class="group rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:scale-[1.01] hover:bg-white/10">
+          <img src="./image/job-pilot.png" alt="Project cover" class="h-44 w-full rounded-xl object-cover ring-1 ring-white/10" />
+          <div class="mt-4">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Job Pilot</h3>
+              <a href="https://github.com/Fraankky" target="_blank" class="text-sm text-mute hover:text-ink" aria-label="Open project">Github ↗</a>
+            </div>
+            <p class="mt-1 text-sm text-mute">Platform yang membantu pencari kerja dan career switchers mempersiapkan aplikasi kerja dengan lebih efektif. Fitur utamanya meliputi ekstraksi CV, ringkasan deskripsi pekerjaan, serta compatibility score untuk menilai kesesuaian antara CV dan lowongan kerja, sekaligus memberikan rekomendasi skill gap yang perlu ditingkatkan.</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">Next JS</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">Tailwind</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">Bun JS</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">PostgreSQL</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">Arctic</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">OpenRouter LLM</span>
+            </div>
+          </div>
+        </article>
+        <article class="group rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:scale-[1.01] hover:bg-white/10">
+          <img src="./image/agrotrusted.png" alt="Project cover" class="h-44 w-full rounded-xl object-cover ring-1 ring-white/10" />
+          <div class="mt-4">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Agrotrusted</h3>
+              <a href="https://github.com/Fraankky" target="_blank" class="text-sm text-mute hover:text-ink">GitHub ↗</a>
+            </div>
+            <p class="mt-1 text-sm text-mute">Platform E-Commerce sederhana pada penjualan ekspor biji kopi dengan konsep design sistem sederhana yang mudah dipahami user</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">React JS</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">Tailwind</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">Redux</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">Shadcn</span>
+            </div>
+          </div>
+        </article>
+        <article class="group rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:scale-[1.01] hover:bg-white/10">
+          <img src="./image/cloning-disney.png" alt="Project cover" class="h-44 w-full rounded-xl object-cover ring-1 ring-white/10" />
+          <div class="mt-4">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">UI Experiments</h3>
+              <a href="https://github.com/Fraankky" target="_blank" class="text-sm text-mute hover:text-ink">Github ↗</a>
+            </div>
+            <p class="mt-1 text-sm text-mute">Latihan slicing UI, pada cloning website disney plus</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">Figma</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">Tailwind</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px]">UI</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="scroll-mt-24 py-20">
+      <h2 class="mb-6 text-3xl font-semibold tracking-tight">Contact</h2>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <p class="text-mute">Interested in collaborating or hiring me? I’m open to new opportunities.</p>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="mailto:you@example.com" class="rounded-xl border border-white/10 bg-accent/10 px-4 py-2 hover:bg-accent/20">farisabdurrohman1414@gmail.com</a>
+          <a href="https://cal.com/your" target="_blank" class="rounded-xl border border-white/10 px-4 py-2 hover:bg-white/10">0895325250501</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10">
+      <div class="flex items-center justify-between border-t border-white/10 pt-6 text-sm text-mute">
+        <span>© <span id="y"></span> Muhammad Faris</span>
+        <a href="#hero" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scroll-to-top FAB -->
+  <button id="totop" aria-label="Scroll to top"
+    class="fixed bottom-6 right-6 hidden rounded-full border border-white/10 bg-white/10 p-3 backdrop-blur hover:bg-white/20">
+    ↑
+  </button>
+
+  <!-- JS: smooth nav active, reveal on scroll, to-top -->
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // smooth-anchor offset handled by CSS .scroll-smooth + padding top in sections
+
+    // scroll spy with IntersectionObserver
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const navlinks = [...document.querySelectorAll('[data-nav]')];
+    const byId = id => navlinks.find(a => a.getAttribute('href') === `#${id}`);
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navlinks.forEach(a => a.classList.remove('text-ink'));
+          const link = byId(e.target.id);
+          link && link.classList.add('text-ink');
+        }
+      });
+    }, { rootMargin: "-40% 0px -50% 0px", threshold: 0.01 });
+    sections.forEach(s => obs.observe(s));
+
+    // show/hide to-top button
+    const totop = document.getElementById('totop');
+    window.addEventListener('scroll', () => {
+      const show = window.scrollY > 600;
+      totop.classList.toggle('hidden', !show);
+    });
+    totop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // reduce heavy animations if prefers-reduced-motion (here we just avoid scaling on hover via data attribute)
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.dataset.reduced = 'true';
+    }
+  </script>
+</body>
+</html>
